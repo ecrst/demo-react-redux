@@ -1,3 +1,87 @@
-body {
-    color: aquamarine;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
+
+#app {
+    height: 100%;
+    margin: 0 auto;
+    color: #FFF;
+    
+    display: grid;
+    grid-template-rows: 75px auto 100px;
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+.Header {
+    grid-area: header;
+    background-color: rgb(114, 46, 145);
+    
+    display: grid;
+    grid-template-columns: 10% auto auto 10%;
+    grid-template-areas:   
+    ". logo buttons .";        
+}
+
+.header-logo {
+    font-size: 2em;
+    font-weight: bold;
+    
+    grid-area: logo;
+    justify-self: left;
+    align-self: center;
+}
+
+.header-buttons-group {
+    grid-area: buttons;
+    justify-self: right;
+    align-self: center;
+}
+
+.header-button {
+    height: 100%;
+    width: 100px;
+    margin-left: 5px;
+    
+    color: white;
+    font-size: 1.4em; 
+    background-color: rgba(172, 252, 146, 0.151);
+    border: none;
+    
+}
+
+.Main {
+    background-color: #FFF;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-row: auto;
+}   
+
+.Footer {
+    background-color: rgb(114, 46, 145);
+    grid-area: footer;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.Home {
+    grid-column: 2 / 3;
+}
+
+.Modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); 
+}
+
