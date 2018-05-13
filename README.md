@@ -11,4 +11,3 @@
 * authentication
 * registration
 
-## Boilerplate taken from: https://github.com/ugncry/webpack-react-redux
